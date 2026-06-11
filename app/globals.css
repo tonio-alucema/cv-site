@@ -1,0 +1,221 @@
+/* ─── Code Saver ──────────────────────────────────────────────────────────── */
+@font-face {
+  font-family: "Code Saver";
+  src: url("/fonts/code-saver-complete-family-webfont-full/code-saver-regular/webfonts/code-saver-regular.woff2") format("woff2"),
+       url("/fonts/code-saver-complete-family-webfont-full/code-saver-regular/webfonts/code-saver-regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Code Saver";
+  src: url("/fonts/code-saver-complete-family-webfont-full/code-saver-italic/webfonts/code-saver-italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Code Saver";
+  src: url("/fonts/code-saver-complete-family-webfont-full/code-saver-medium/webfonts/code-saver-medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Code Saver";
+  src: url("/fonts/code-saver-complete-family-webfont-full/code-saver-medium-italic/webfonts/code-saver-medium-italic.woff2") format("woff2");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Code Saver";
+  src: url("/fonts/code-saver-complete-family-webfont-full/code-saver-bold/webfonts/code-saver-bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Code Saver";
+  src: url("/fonts/code-saver-complete-family-webfont-full/code-saver-bold-italic/webfonts/code-saver-bold-italic.woff2") format("woff2");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* ─── Segment ─────────────────────────────────────────────────────────────── */
+@font-face {
+  font-family: "Segment";
+  src: url("/fonts/segment-complete-family-webfont-full/segment-extralight/webfonts/segment-extralight.woff2") format("woff2");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Segment";
+  src: url("/fonts/segment-complete-family-webfont-full/segment-light/webfonts/segment-light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Segment";
+  src: url("/fonts/segment-complete-family-webfont-full/segment-regular/webfonts/segment-regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Segment";
+  src: url("/fonts/segment-complete-family-webfont-full/segment-medium/webfonts/segment-medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Segment";
+  src: url("/fonts/segment-complete-family-webfont-full/segment-semibold/webfonts/segment-semibold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Segment";
+  src: url("/fonts/segment-complete-family-webfont-full/segment-bold/webfonts/segment-bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ─── Tokens ──────────────────────────────────────────────────────────────── */
+:root {
+  --font-mono: "Code Saver", "SF Mono", "Fira Code", Consolas, monospace;
+  --font-display: "Segment", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  --bg: #151515;
+  --text: #eaeaea;
+  --text-dim: rgba(234, 234, 234, 0.4);
+  --text-muted: rgba(234, 234, 234, 0.2);
+  --accent: #3dffd8;
+}
+
+/* ─── Reset ───────────────────────────────────────────────────────────────── */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scrollbar-gutter: stable;
+}
+
+html,
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-display);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: rgba(61, 255, 216, 0.25);
+  color: #fff;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a.nav-external-link {
+  cursor: pointer;
+}
+
+a.nav-external-link .nav-external-link-label {
+  color: inherit;
+  opacity: 0.4;
+  transition: color 0.15s ease, opacity 0.15s ease;
+}
+
+.site-nav[data-intro-active] .nav-external-link-label {
+  opacity: 0.35;
+}
+
+a.nav-external-link:hover .nav-external-link-label {
+  color: #fff;
+  opacity: 1;
+}
+
+a.nav-external-link .nav-external-link-arrow {
+  color: var(--accent);
+  opacity: 1;
+}
+
+button.soul-md-toggle-btn .soul-md-toggle-accent {
+  color: inherit;
+  font-weight: 500;
+  transition: color 0.15s ease;
+}
+
+button.soul-md-toggle-btn .soul-md-toggle-accent.soul-md-toggle-arrow {
+  display: inline-block;
+  color: var(--accent);
+  transition:
+    color 0.15s ease,
+    transform 0.35s ease-in-out;
+  transform: rotate(0deg);
+  transform-origin: 50% 55%;
+}
+
+button.soul-md-toggle-btn[aria-expanded="true"] .soul-md-toggle-accent.soul-md-toggle-arrow {
+  transform: rotate(90deg);
+}
+
+button.soul-md-toggle-btn:hover .soul-md-toggle-accent {
+  color: var(--accent);
+}
+
+button.soul-md-toggle-btn[aria-expanded="true"] .soul-md-toggle-accent {
+  color: var(--accent);
+}
+
+button {
+  background: none;
+  border: none;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(234, 234, 234, 0.08);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(234, 234, 234, 0.16);
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(8px); }
+  /* End with transform: none so ancestors don’t keep a transform after fill-forwards
+     (transform breaks position: sticky for timeline asides). */
+  to { opacity: 1; transform: none; }
+}
+
+@keyframes sandboxFadeUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: none; }
+}

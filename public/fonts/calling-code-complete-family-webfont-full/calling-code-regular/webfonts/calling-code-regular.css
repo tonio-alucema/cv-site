@@ -1,0 +1,27 @@
+/*
+Font: 		Calling Code
+Style: 		Regular
+URL: 		https://www.youworkforthem.com/font/T7973/calling-code
+Foundry: 	Ryoichi Tsunekawa
+Foundry: 	https://www.youworkforthem.com/designer/147/ryoichi-tsunekawa
+Copyright:	Copyright © 2017 by Ryoichi Tsunekawa. All rights reserved.
+Version: 	17
+Created:	January 31, 2018
+License: 	https://www.youworkforthem.com/font-license 
+License: 	The WebFont(s) listed in this document must follow the YouWorkForThem
+			WebFont license rules. All other parties are strictly restricted 
+			from using the WebFonts(s) listed without a purchased license. 
+			All details above must always remain unaltered and visible in your CSS.
+*/
+
+@font-face {
+	font-family: 'CallingCode-Regular';
+	src: url('calling-code-regular.eot');
+	src: url('calling-code-regular.eot?#iefix') format('embedded-opentype'),
+             url('calling-code-regular.woff2') format('woff2'),
+	     url('calling-code-regular.woff') format('woff'),
+	     url('calling-code-regular.ttf') format('truetype'),
+	     url('calling-code-regular.svg#youworkforthem') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
